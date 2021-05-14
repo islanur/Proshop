@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import express from 'express';
 import dotenv from 'dotenv';
 // eslint-disable-next-line no-unused-vars
