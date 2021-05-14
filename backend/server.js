@@ -1,8 +1,12 @@
+/* eslint-disable no-undef */
 import express from 'express';
+import dotenv from 'dotenv';
 import products from './data/products.js';
 
+dotenv.config();
+
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -18,5 +22,7 @@ app.get('/api/products/:id', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode and listening at http://localhost:${port}`
+  );
 });
