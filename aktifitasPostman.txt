@@ -2,6 +2,14 @@ Commit 17/5/21 - User Controller:
 - Membuat folder Users
 - Buat request: POST /api/users/login
 -------------------------------------------------
-17/5/21 - Folder Users
+17/5/21 - Folder Users:
 Buat request: GET /api/users/profile
 Test dengan authorization "Bearer {Token}"
+-------------------------------------------------
+Folder Users:
+Hapus authorization dari POST /api/users/profile
+Tambahkan di tab Tests GET /api/users/login "pm.environment.set("TOKEN", pm.response.json().token)"
+Isi {{TOKEN}} di authorization POST /api/users/profile pada type Bearer Token
+
+Buat request baru: POST /api/users untuk buat user baru
+
