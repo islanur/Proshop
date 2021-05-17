@@ -12,4 +12,7 @@ Tambahkan di tab Tests GET /api/users/login "pm.environment.set("TOKEN", pm.resp
 Isi {{TOKEN}} di authorization POST /api/users/profile pada type Bearer Token
 
 Buat request baru: POST /api/users untuk buat user baru
-
+-------------------------------------------------
+Edit profil user:
+Buat request baru: PUT /api/users/profile
+Kirim data user edit JSON tanpa Auth token dan dengan Auth token
